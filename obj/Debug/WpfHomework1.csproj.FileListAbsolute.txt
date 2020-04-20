@@ -1,0 +1,17 @@
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\bin\Debug\WpfHomework1.exe.config
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\bin\Debug\WpfHomework1.exe
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\bin\Debug\WpfHomework1.pdb
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1.csprojAssemblyReference.cache
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\MainWindow.g.cs
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\View\AddCommandView.g.cs
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\App.g.cs
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1_MarkupCompile.cache
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1_MarkupCompile.lref
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\MainWindow.baml
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\View\AddCommandView.baml
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1.g.resources
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1.Properties.Resources.resources
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1.csproj.GenerateResource.cache
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1.csproj.CoreCompileInputs.cache
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1.exe
+C:\Users\Haci\source\repos\WpfHomework1\WpfHomework1\obj\Debug\WpfHomework1.pdb
