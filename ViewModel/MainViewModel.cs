@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Input;
 using WpfHomework1.Command;
 using WpfHomework1.Model;
@@ -20,7 +21,7 @@ namespace WpfHomework1.ViewModel
 
         public void AddCommandExecute(object param)
         {
-
+            MessageBox.Show("Added");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

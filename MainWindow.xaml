@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Button Content="Add" Command="{Binding AddCommand}"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <ListBox x:Name="listBox" ItemsSource="{Binding Cars}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Width="50" Height="50" >
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}">
+                                        <Setter Property="Source" Value="{Binding Photo}"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Photo}" Value="{x:Null}">
+                                                <Setter Property="Image.Source" Value="NoPhoto.png"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                            <Label Grid.Column="1" Content="{Binding Vendor}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Label Grid.Column="2" Content="{Binding Model}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
     </Grid>
 </Window>
