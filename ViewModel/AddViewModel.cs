@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using WpfHomework1.Command;
 using WpfHomework1.Model;
 
@@ -7,15 +6,24 @@ namespace WpfHomework1.ViewModel
 {
     class AddViewModel
     {
-        public Car CarExample { get; set; }
+        private readonly MainViewModel mainViewModel;
+
+        public string CarModel  { get; set; }
+        public string CarPhoto  { get; set; }
+        public string CarVendor { get; set; }
+
         public ICommand SaveCommand { get; set; }
-        public AddViewModel()
+
+        public AddViewModel(MainViewModel mainViewModel)
         {
+            this.mainViewModel = mainViewModel;
             SaveCommand = new RelayCommand(SaveCommandExecute);
         }
+
         public void SaveCommandExecute(object param)
         {
-            MessageBox.Show("Saved");
+            Car car = new Car { Model = CarModel, Vendor = CarVendor, Photo = CarPhoto };
+            mainViewModel.Cars.Add(car);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace WpfHomework1.ViewModel
 
         public void AddCommandExecute(object param)
         {
-            AddCommandView addView = new AddCommandView();
+            AddCommandView addView = new AddCommandView(this);
             addView.Show();
         }
         public event PropertyChangedEventHandler PropertyChanged;

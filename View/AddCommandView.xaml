@@ -17,15 +17,15 @@
 
         <StackPanel Grid.Row="0">
             <Label Content="Model"/>
-            <TextBox Grid.Row="0"/>
+            <TextBox Grid.Row="0" Text="{Binding CarModel}"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Label Content="Model"/>
-            <TextBox Grid.Row="0"/>
+            <Label Content="Vendor"/>
+            <TextBox Grid.Row="0" Text="{Binding CarVendor}"/>
         </StackPanel>
         <StackPanel Grid.Row="2">
             <Label Content="Photo Path"/>
-            <TextBox Grid.Row="0"/>
+            <TextBox Grid.Row="0" Text="{Binding CarPhoto}"/>
         </StackPanel>
         <Button Grid.Row="3" Content="Add" Height="50" Command="{Binding SaveCommand}"/>
     </Grid>

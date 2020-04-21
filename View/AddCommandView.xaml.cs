@@ -5,10 +5,10 @@ namespace WpfHomework1.View
 {
     public partial class AddCommandView : Window
     {
-        public AddCommandView()
+        public AddCommandView(MainViewModel mainViewModel)
         {
             InitializeComponent();
-            DataContext = new AddViewModel();
+            DataContext = new AddViewModel(mainViewModel);
         }
     }
 }
