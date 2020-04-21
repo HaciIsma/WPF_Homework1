@@ -27,6 +27,6 @@
             <Label Content="Photo Path"/>
             <TextBox Grid.Row="0"/>
         </StackPanel>
-        <Button Grid.Row="3" Content="Add" Height="50"/>
+        <Button Grid.Row="3" Content="Add" Height="50" Command="{Binding SaveCommand}"/>
     </Grid>
 </Window>
