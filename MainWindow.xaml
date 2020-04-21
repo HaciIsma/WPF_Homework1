@@ -22,6 +22,11 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
+                            <Grid.ContextMenu>
+                                <ContextMenu Name="EditMenu">
+                                    <MenuItem Header="Edit"/>
+                                </ContextMenu>
+                            </Grid.ContextMenu>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
