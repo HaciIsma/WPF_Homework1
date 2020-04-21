@@ -15,17 +15,23 @@ namespace WpfHomework1.ViewModel
             new Car{Model="BMW",Vendor="X5",Photo="X5.png"}
         };
 
-        public ICommand AddCommand { get; set; }
+        public ICommand AddCommand  { get; set; }
+        public ICommand EditCommand { get; set; }
 
         public MainViewModel()
         {
-            AddCommand = new RelayCommand(AddCommandExecute);
+            AddCommand  = new RelayCommand(AddCommandExecute);
+            EditCommand = new RelayCommand(EditCommandExecute);
         }
 
         public void AddCommandExecute(object param)
         {
             AddCommandView addView = new AddCommandView(this);
             addView.Show();
+        }
+        public void EditCommandExecute(object param)
+        {
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfHomework1.View.EditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHomework1.View"
+        mc:Ignorable="d"
+        Title="AddView" Height="250" Width="400">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Label Content="Model"/>
+            <TextBox Grid.Row="0" Text="{Binding CarModel}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Label Content="Vendor"/>
+            <TextBox Grid.Row="0" Text="{Binding CarVendor}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Label Content="Photo Path"/>
+            <TextBox Grid.Row="0" Text="{Binding CarPhoto}"/>
+        </StackPanel>
+        <Button Grid.Row="3" Content="Edit" Height="50" Command="{Binding SaveCommand}"/>
+    </Grid>
+</Window>

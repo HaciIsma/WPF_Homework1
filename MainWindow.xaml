@@ -14,11 +14,16 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Button Content="Add" Command="{Binding AddCommand}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Add"  Command="{Binding AddCommand}"/>
+            <Button Grid.Column="1" Content="Save" ></Button>
         </Grid>
 
         <Grid Grid.Row="1">
-            <ListBox x:Name="listBox" ItemsSource="{Binding Cars}">
+            <ListBox x:Name="ListBox" ItemsSource="{Binding Cars}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
