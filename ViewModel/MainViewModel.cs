@@ -15,6 +15,7 @@ namespace WpfHomework1.ViewModel
             new Car{Model="BMW",Vendor="X5",Photo="X5.png"}
         };
 
+        public int SelectedCarIndex { get; set; }
         public ICommand AddCommand  { get; set; }
         public ICommand EditCommand { get; set; }
 
@@ -31,7 +32,8 @@ namespace WpfHomework1.ViewModel
         }
         public void EditCommandExecute(object param)
         {
-
+            EditView editView = new EditView(this);
+            editView.Show();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

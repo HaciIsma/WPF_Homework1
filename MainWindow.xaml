@@ -6,6 +6,14 @@
         xmlns:local="clr-namespace:WpfHomework1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ContextMenu x:Key="ItemContextMenu" DataContext="{Binding PlacementTarget.Tag, 
+                     RelativeSource={RelativeSource Self}}">
+            <MenuItem Header="Edit"  Command="{Binding EditCommand}"
+                      CommandParameter="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource AncestorType=ContextMenu}}">
+            </MenuItem>
+        </ContextMenu>
+    </Window.Resources>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -19,19 +27,19 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Content="Add"  Command="{Binding AddCommand}"/>
-            <Button Grid.Column="1" Content="Save" ></Button>
+            <Button Grid.Column="1" Content="Save" />
         </Grid>
 
         <Grid Grid.Row="1">
-            <ListBox x:Name="ListBox" ItemsSource="{Binding Cars}">
+            <ListBox x:Name="ListBox" ItemsSource="{Binding Cars}" SelectedIndex="{Binding SelectedCarIndex}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <Grid.ContextMenu>
+                        <Grid Tag="{Binding DataContext, ElementName=ListBox}" ContextMenu="{StaticResource ItemContextMenu}">
+                            <!--<Grid.ContextMenu>
                                 <ContextMenu Name="EditMenu">
-                                    <MenuItem Header="Edit"/>
+                                    <MenuItem Header="Edit" Command="{Binding EditCommand}"/>
                                 </ContextMenu>
-                            </Grid.ContextMenu>
+                            </Grid.ContextMenu>-->
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>

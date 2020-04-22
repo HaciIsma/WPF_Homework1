@@ -9,6 +9,9 @@ namespace WpfHomework1.View
         {
             InitializeComponent();
             DataContext = new AddViewModel(mainViewModel);
+
+            ResizeMode = ResizeMode.CanResize;
+            ResizeMode = ResizeMode.NoResize;
         }
     }
 }
