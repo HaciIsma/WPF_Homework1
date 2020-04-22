@@ -42,7 +42,7 @@
                                     <Style TargetType="{x:Type Image}">
                                         <Setter Property="Source" Value="{Binding Photo}"/>
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Photo}" Value="{x:Null}">
+                                            <DataTrigger Binding="{Binding Photo}" Value="">
                                                 <Setter Property="Image.Source" Value="NoPhoto.png"/>
                                             </DataTrigger>
                                         </Style.Triggers>

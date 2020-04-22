@@ -9,7 +9,7 @@ namespace WpfHomework1.ViewModel
         private readonly MainViewModel mainViewModel;
 
         public string CarModel  { get; set; }
-        public string CarPhoto  { get; set; }
+        public string CarPhoto { get; set; } = string.Empty;
         public string CarVendor { get; set; }
 
         public ICommand SaveCommand { get; set; }
