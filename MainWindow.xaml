@@ -11,6 +11,9 @@
                      RelativeSource={RelativeSource Self}}">
             <MenuItem Header="Edit"  Command="{Binding EditCommand}"
                       CommandParameter="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource AncestorType=ContextMenu}}">
+                <MenuItem.Icon>
+                    <Image Source="Resource/pencil.png"/>
+                </MenuItem.Icon>
             </MenuItem>
         </ContextMenu>
     </Window.Resources>
@@ -27,7 +30,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Content="Add"  Command="{Binding AddCommand}"/>
-            <Button Grid.Column="1" Content="Save" />
+            <Button Grid.Column="1" Content="Save" Visibility="{Binding SaveButtonVisible}" Command="{Binding SaveCommand}">
+               
+            </Button>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -35,11 +40,6 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Tag="{Binding DataContext, ElementName=ListBox}" ContextMenu="{StaticResource ItemContextMenu}">
-                            <!--<Grid.ContextMenu>
-                                <ContextMenu Name="EditMenu">
-                                    <MenuItem Header="Edit" Command="{Binding EditCommand}"/>
-                                </ContextMenu>
-                            </Grid.ContextMenu>-->
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
@@ -51,7 +51,7 @@
                                         <Setter Property="Source" Value="{Binding Photo}"/>
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding Photo}" Value="">
-                                                <Setter Property="Image.Source" Value="NoPhoto.png"/>
+                                                <Setter Property="Image.Source" Value="Resource/NoPhoto.png"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
